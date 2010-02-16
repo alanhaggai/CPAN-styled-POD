@@ -4,6 +4,8 @@ use warnings;
 use strict;
 use base 'Pod::Simple::HTML';
 
+my $VERSION = 0.1;
+
 sub html_header_after_title {
     local $/ = undef;
     return << "EOF";
@@ -451,3 +453,35 @@ if ( !-f $file_name ) {
 
 my $parser = __PACKAGE__->new();
 $parser->parse_from_file($file_name);
+
+__END__
+
+=head1 NAME
+
+CPAN styled POD
+
+=head1 DESCRIPTION
+
+Usage:
+
+    cpan_styled_pod /path/to/module.pm > module.html
+
+=head1 README
+
+Converts POD to HTML and applies styles similar to CPAN.
+
+=head1 PREREQUISITES
+
+L<warnings>
+
+L<strict>
+
+L<Pod::Simple::HTML>
+
+=head1 OSNAMES
+
+any
+
+=head1 SCRIPT CATEGORIES
+
+CPAN
