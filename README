@@ -1,0 +1,3 @@
+Usage:
+
+cpan_styled_pod /path/to/module.pm > module.html
